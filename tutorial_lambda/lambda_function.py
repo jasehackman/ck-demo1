@@ -9,6 +9,7 @@ def lambda_handler(event, context):
         table_name = lambda_env("table_name")
     
         dynamodb = boto3.client("dynamodb")
+        print('did I break it? ')
 
         print(event)
         context = event.get("requestContext")
