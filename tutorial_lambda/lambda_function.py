@@ -15,6 +15,7 @@ def lambda_handler(event, context):
         http_method = context.get("http").get("method")
         raw_path = event['rawPath']
         path = raw_path.replace("/live", "")
+        print("hello")
 
         # Prevents iterating counter on CORS options calls
         if http_method == "OPTIONS":
